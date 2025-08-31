@@ -1,104 +1,66 @@
-.alert {
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 4px;
-    color: #fff;
-}
-
-.success {
-    background-color: #4CAF50;
-}
-
-.error {
-    background-color: #f44336;
-}
-
-.info {
-    background-color: #2196F3;
-}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expense Tracker</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Personal Finance Tracker</title>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
     <div class="container">
-        <h1>Expense Tracker</h1>
+        <h1>Personal Finance Tracker 💰</h1>
+        
+        <form id="txForm">
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required>
 
-        <div class="section">
-            <h2>Income</h2>
-            <div class="input-group">
-                <label for="income-description">Description</label>
-                <input type="text" id="income-description" placeholder="e.g. Salary">
-            </div>
-            <div class="input-group">
-                <label for="income-amount">Amount</label>
-                <input type="number" id="income-amount" placeholder="e.g. 1000">
-            </div>
-            <div class="button-group">
-                <button onclick="addIncome()">Add Income</button>
-            </div>
-        </div>
+            <label for="desc">Description</label>
+            <input type="text" id="desc" name="desc" required>
 
-        <div class="section">
-            <h2>Expenses</h2>
-            <div class="input-group">
-                <label for="expense-description">Description</label>
-                <input type="text" id="expense-description" placeholder="e.g. Rent">
-            </div>
-            <div class="input-group">
-                <label for="expense-category">Category</label>
-                <select id="expense-category">
-                    <option value="Housing">Housing</option>
-                    <option value="Food">Food</option>
-                    <option value="Transportation">Transportation</option>
-                    <option value="Entertainment">Entertainment</option>
-                    <option value="Others">Others</option>
-                </select>
-            </div>
-            <div class="input-group">
-                <label for="expense-amount">Amount</label>
-                <input type="number" id="expense-amount" placeholder="e.g. 500">
-            </div>
-            <div class="button-group">
-                <button onclick="addExpense()">Add Expense</button>
-            </div>
-        </div>
+            <label for="category">Category</label>
+            <select id="category" name="category">
+                <option value="Salary">Salary</option>
+                <option value="Food">Food</option>
+                <option value="Transport">Transport</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Others">Others</option>
+            </select>
 
-        <div class="table-container">
-            <h2>Transaction History</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Description</th>
-                        <th>Category</th>
-                        <th>Amount</th>
-                        <th>Type</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody id="transaction-history">
-                    <!-- Transactions will appear here -->
-                </tbody>
-            </table>
-        </div>
+            <label for="type">Type</label>
+            <select id="type" name="type">
+                <option value="Income">Income</option>
+                <option value="Expense">Expense</option>
+            </select>
+
+            <label for="amount">Amount</label>
+            <input type="number" id="amount" name="amount" required min="1" step="0.01">
+
+            <button type="submit">Add Transaction</button>
+        </form>
 
         <div class="summary">
-            <h2>Budget Summary</h2>
-            <p>Total Income: <span id="total-income">0</span></p>
-            <p>Total Expenses: <span id="total-expenses">0</span></p>
-            <p>Balance: <span id="balance">0</span></p>
+            <p>Total Income: <span id="totalIncome">₹0.00</span></p>
+            <p>Total Expenses: <span id="totalExpense">₹0.00</span></p>
+            <p>Balance: <span id="balance">₹0.00</span></p>
         </div>
 
-        <div class="clear-button-group">
-            <button onclick="clearAll()">Clear All</button>
-        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Type</th>
+                    <th>Amount</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="txBody">
+                <!-- Transactions will appear here -->
+            </tbody>
+        </table>
+        <button id="clearAll" class="clear-btn">Clear All</button>
     </div>
     <script src="script.js"></script>
 </body>
-  </html>
-  
+</html>

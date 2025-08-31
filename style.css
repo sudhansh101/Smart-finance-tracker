@@ -1,0 +1,10 @@
+body {
+  background: #f6f7fb;
+  font-family: Arial, sans-serif;
+}
+.card {
+  border-radius: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.badge-income { background: #d1f7d6; color: #0a6b1e; padding: 4px 8px; border-radius: 4px; }
+.badge-expense { background: #ffe0e0; color: #a10000; padding: 4px 8px; border-radius: 4px; }

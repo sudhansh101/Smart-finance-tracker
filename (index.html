@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Personal Finance Tracker</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-dark bg-dark mb-4">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" href="#">💰 Personal Finance Tracker</a>
+    </div>
+  </nav>
+
+  <main class="container pb-5">
+    <!-- Summary -->
+    <section class="row g-3 mb-4">
+      <div class="col-md-4"><div class="card"><div class="card-body"><h6>Total Income</h6><h3 id="totalIncome">₹0</h3></div></div></div>
+      <div class="col-md-4"><div class="card"><div class="card-body"><h6>Total Expense</h6><h3 id="totalExpense">₹0</h3></div></div></div>
+      <div class="col-md-4"><div class="card"><div class="card-body"><h6>Balance</h6><h3 id="balance">₹0</h3></div></div></div>
+    </section>
+
+    <!-- Add Transaction Form -->
+    <section class="card mb-4"><div class="card-body">
+      <h5 class="mb-3">Add Transaction</h5>
+      <form id="txForm" class="row g-3">
+        <div class="col-md-2"><input type="date" id="date" class="form-control" required></div>
+        <div class="col-md-3"><input type="text" id="desc" class="form-control" placeholder="Description" required></div>
+        <div class="col-md-2">
+          <select id="category" class="form-select">
+            <option>Food</option><option>Transport</option><option>Bills</option><option>Shopping</option><option>Salary</option><option>Other</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <select id="type" class="form-select">
+            <option value="income">Income</option>
+            <option value="expense" selected>Expense</option>
+          </select>
+        </div>
+        <div class="col-md-2"><input type="number" id="amount" class="form-control" placeholder="Amount ₹" required></div>
+        <div class="col-md-1 d-grid"><button type="submit" class="btn btn-primary">Add</button></div>
+      </form>
+    </div></section>
+
+    <!-- Transactions Table -->
+    <section class="card mb-4"><div class="card-body">
+      <h5 class="mb-3">Transactions</h5>
+      <table class="table">
+        <thead><tr><th>Date</th><th>Description</th><th>Category</th><th>Type</th><th>Amount</th><th></th></tr></thead>
+        <tbody id="txBody"></tbody>
+      </table>
+      <button id="clearAll" class="btn btn-danger btn-sm">Clear All</button>
+    </div></section>
+
+    <!-- Chart -->
+    <section class="card"><div class="card-body">
+      <h5 class="mb-3">Category-wise Spend</h5>
+      <canvas id="spendingChart"></canvas>
+    </div></section>
+  </main>
+
+  <!-- Bootstrap + Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+                                </html>

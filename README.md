@@ -1,19 +1,23 @@
 # Personal Finance Tracker 💰
 
-A simple web app to manage income & expenses with charts and localStorage.
+A simple and efficient web application to manage expenses and savings.  
+This project provides **real-time analytics** and **visual reports** to help with better financial planning.  
 
-## Features
-- Add/edit/delete transactions
-- Categories & types (Income/Expense)
-- Monthly totals & balance
-- Category-wise chart (Chart.js)
-- Data saved in browser (localStorage)
+---
 
-## Tech
-HTML, CSS, Bootstrap 5, JavaScript, Chart.js
+## 🚀 Features
+- Add, edit, and delete income/expenses.
+- Categorize transactions (e.g., food, transport, bills, savings).
+- Generate visual reports and charts.
+- Track monthly and yearly spending trends.
+- Simple and responsive UI with Bootstrap.
 
-## Quick Start
-1) Open `index.html` directly in your browser.
-2) Add a few transactions. Data auto-saves.
+---
 
-## Structure
+## 🛠️ Tech Stack
+- **Frontend**: HTML, CSS, Bootstrap, JavaScript  
+- **Data Handling**: LocalStorage  
+
+---
+
+## 📂 Project Structure

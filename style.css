@@ -1,10 +1,100 @@
 body {
-  background: #f6f7fb;
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 30px 0;
+  background: #eef1f7;
 }
-.card {
-  border-radius: 1rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+.container {
+  max-width: 750px;
+  margin: auto;
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px 32px;
+  box-shadow: 0 2px 12px rgba(100,100,100,0.15);
 }
-.badge-income { background: #d1f7d6; color: #0a6b1e; padding: 4px 8px; border-radius: 4px; }
-.badge-expense { background: #ffe0e0; color: #a10000; padding: 4px 8px; border-radius: 4px; }
+h1 {
+  text-align: center;
+}
+form label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 3px;
+  font-weight: bold;
+}
+form input, form select, form button {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+form button {
+  background: #2196f3;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+}
+form button:hover {
+  background: #1763a6;
+}
+.summary {
+  margin: 18px 0;
+  padding: 10px 15px;
+  background: #f9f9f9;
+  border-radius: 6px;
+}
+.summary span {
+  font-weight: bold;
+}
+table {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 8px 7px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+.badge-income {
+  color: #fff;
+  background: #4caf50;
+  padding: 2px 8px;
+  border-radius: 13px;
+}
+.badge-expense {
+  color: #fff;
+  background: #f44336;
+  padding: 2px 8px;
+  border-radius: 13px;
+}
+.btn {
+  padding: 3px 12px;
+  font-size: 0.9em;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.btn-danger {
+  background: #f44336;
+  color: #fff;
+}
+.btn-danger:hover {
+  background: #c62828;
+}
+.clear-btn {
+  margin-top: 18px;
+  width: 100%;
+  background: #e53935;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 0;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+.clear-btn:hover {
+  background: #b71c1c;
+  }
